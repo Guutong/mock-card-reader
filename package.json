@@ -18,5 +18,10 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^2.0.0"
+  },
+  "dependencies": {
+    "btoa": "^1.2.1",
+    "bulma": "^0.7.1",
+    "ws": "^5.1.1"
   }
 }
