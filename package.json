@@ -4,15 +4,22 @@
   "description": "A minimal Electron mock card reader",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "author": "guutong",
   "devDependencies": {
     "electron": "^2.0.0"
   },
   "dependencies": {
-    "btoa": "^1.2.1",
     "bulma": "^0.7.1",
     "ws": "^5.1.1"
+  },
+  "build": {
+    "appId": "com.github.guutong.mockcardreader",
+    "mac": {
+      "category": "com.github.guutong.mockcardreader"
+    }
   }
 }
