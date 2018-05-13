@@ -8,61 +8,51 @@
 </head>
 
 <body>
-  <div class="container" style="padding: 30px;">
-    <div class="columns">
-      <div class="column">
-        <div class="field is-horizontal">
-          <div class="field-body">
-            <div class="field">
-              <span>IdcardInfo</span>
-              <p class="control">
-                <textarea id="txtIdCardInfo" class="textarea" rows="8"></textarea>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="field is-horizontal">
-          <div class="field-body">
-            <div class="field">
-              <span>Photo base64</span>
-              <p class="control">
-                <textarea id="txtPhoto" class="textarea" rows="8"></textarea>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <ul style="padding: 5px">
-          <li style="padding: 5px">
-            <a id="btnStartWebSocket" class="button is-primary">
-              Start Server
-            </a>
-            <a id="btnStopWebSocket" class="button is-danger" disabled>
-              Stop Server
-            </a>
-          </li>
+  <section>
+    <div class="container" style="padding: 30px;">
+      <div class="columns">
+        <div class="column">
+          <a id="btnLoadFile" class="button is-success">
+            Browse File json
+          </a>
           <hr/>
-          <li style="padding: 5px">
-            <a id="btnOnCardInserted" class="button is-primary" style="width: 100%">OnCardInserted</a>
-          </li>
-          <li style="padding: 5px">
-            <a id="btnOnCardLoadProgress" class="button is-info" style="width: 100%">OnCardLoadProgress</a>
-          </li>
-          <li style="padding: 5px">
-            <a id="btnOnCardLoadCompleted" class="button is-success" style="width: 100%">OnCardLoadCompleted</a>
-          </li>
-          <li style="padding: 5px">
-            <a id="btnOnCardRemoved" class="button is-warning" style="width: 100%">OnCardRemoved</a>
-          </li>
-          <li style="padding: 5px">
-            <a id="btnOnCardLoadError" class="button is-danger" style="width: 100%">OnCardLoadError</a>
-          </li>
-        </ul>
+          <ul id="mockList">
+          </ul>
+          <a id="btnDeleteCard" class="button is-danger">
+              Delete
+          </a>
+        </div>
+        <div class="column">
+          <ul style="padding: 5px">
+            <li style="padding: 5px">
+              <a id="btnStartWebSocket" class="button is-primary">
+                Start Server
+              </a>
+              <a id="btnStopWebSocket" class="button is-danger" disabled>
+                Stop Server
+              </a>
+            </li>
+            <hr/>
+            <li style="padding: 5px">
+              <a id="btnOnCardInserted" class="button is-primary" style="width: 100%" disabled>OnCardInserted</a>
+            </li>
+            <li style="padding: 5px">
+              <a id="btnOnCardLoadProgress" class="button is-info" style="width: 100%" disabled>OnCardLoadProgress</a>
+            </li>
+            <li style="padding: 5px">
+              <a id="btnOnCardLoadCompleted" class="button is-success" style="width: 100%" disabled>OnCardLoadCompleted</a>
+            </li>
+            <li style="padding: 5px">
+              <a id="btnOnCardRemoved" class="button is-warning" style="width: 100%" disabled>OnCardRemoved</a>
+            </li>
+            <li style="padding: 5px">
+              <a id="btnOnCardLoadError" class="button is-danger" style="width: 100%" disabled>OnCardLoadError</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-    
-  </div>
+  </section>
   <script>
     // You can also require other files to run in this process
     require('./renderer.js')
